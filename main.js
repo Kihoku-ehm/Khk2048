@@ -3,6 +3,7 @@ $(function(){
   managelist=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
   Displaynumber = 0;
   Unit = "";
+  highscore = 0;
 
   const canvas = document.getElementById("myCanvas");
     const ctx = canvas.getContext("2d");
@@ -146,19 +147,19 @@ $(function(){
             }
             else if(Producednumber == 3)
             {
-                ctx.fillStyle = "#508750";
+                ctx.fillStyle = "#6e8750ff";
             }
             else if(Producednumber == 4)
             {
-                ctx.fillStyle = "#3d757b";
+                ctx.fillStyle = "#3d407bff";
             }
             else if(Producednumber == 5)
             {
-                ctx.fillStyle = "#137d66";
+                ctx.fillStyle = "#137d6bff";
             }
             else if(Producednumber == 6)
             {
-                ctx.fillStyle = "#964b96";
+                ctx.fillStyle = "#962a59ff";
             }
             else if(Producednumber == 7)
             {
@@ -170,7 +171,7 @@ $(function(){
             }
             else if(Producednumber == 9)
             {
-                ctx.fillStyle = "#b01782";
+                ctx.fillStyle = "#6c810eff";
             }
             else if(Producednumber == 10)
             {
@@ -293,19 +294,19 @@ $(function(){
             }
             else if(Producednumber == 3)
             {
-                ctx.fillStyle = "#508750";
+                ctx.fillStyle = "#6e8750ff";
             }
             else if(Producednumber == 4)
             {
-                ctx.fillStyle = "#3d757b";
+                ctx.fillStyle = "#3d407bff";
             }
             else if(Producednumber == 5)
             {
-                ctx.fillStyle = "#137d66";
+                ctx.fillStyle = "#137d6bff";
             }
             else if(Producednumber == 6)
             {
-                ctx.fillStyle = "#964b96";
+                ctx.fillStyle = "#962a59ff";
             }
             else if(Producednumber == 7)
             {
@@ -317,7 +318,7 @@ $(function(){
             }
             else if(Producednumber == 9)
             {
-                ctx.fillStyle = "#b01782";
+                ctx.fillStyle = "#6c810eff";
             }
             else if(Producednumber == 10)
             {
@@ -440,19 +441,19 @@ $(function(){
             }
             else if(Producednumber == 3)
             {
-                ctx.fillStyle = "#508750";
+                ctx.fillStyle = "#6e8750ff";
             }
             else if(Producednumber == 4)
             {
-                ctx.fillStyle = "#3d757b";
+                ctx.fillStyle = "#3d407bff";
             }
             else if(Producednumber == 5)
             {
-                ctx.fillStyle = "#137d66";
+                ctx.fillStyle = "#137d6bff";
             }
             else if(Producednumber == 6)
             {
-                ctx.fillStyle = "#964b96";
+                ctx.fillStyle = "#962a59ff";
             }
             else if(Producednumber == 7)
             {
@@ -464,7 +465,7 @@ $(function(){
             }
             else if(Producednumber == 9)
             {
-                ctx.fillStyle = "#b01782";
+                ctx.fillStyle = "#6c810eff";
             }
             else if(Producednumber == 10)
             {
@@ -587,19 +588,19 @@ $(function(){
             }
             else if(Producednumber == 3)
             {
-                ctx.fillStyle = "#508750";
+                ctx.fillStyle = "#6e8750ff";
             }
             else if(Producednumber == 4)
             {
-                ctx.fillStyle = "#3d757b";
+                ctx.fillStyle = "#3d407bff";
             }
             else if(Producednumber == 5)
             {
-                ctx.fillStyle = "#137d66";
+                ctx.fillStyle = "#137d6bff";
             }
             else if(Producednumber == 6)
             {
-                ctx.fillStyle = "#964b96";
+                ctx.fillStyle = "#962a59ff";
             }
             else if(Producednumber == 7)
             {
@@ -611,7 +612,7 @@ $(function(){
             }
             else if(Producednumber == 9)
             {
-                ctx.fillStyle = "#b01782";
+                ctx.fillStyle = "#6c810eff";
             }
             else if(Producednumber == 10)
             {
@@ -721,7 +722,7 @@ $(function(){
             ctx.fillText(2**Displaynumber + Unit , 30 + (Placenumber - 12) * 115, 510);
             managelist[Placenumber-1]=Producednumber;
         }
-        console.log(managelist);
+        //console.log(managelist);
     }
 
     function draw()
@@ -753,6 +754,10 @@ $(function(){
             if(managelist[0] == managelist[4])
             {
                 managelist[0] += 1;
+                if(managelist[0] > highscore)
+                {
+                    highscore = managelist[0];
+                }
                 managelist[4] = 0;
                 drawNumber(1,managelist[0]);
                 ctx.beginPath();
@@ -778,6 +783,10 @@ $(function(){
             if(managelist[1] == managelist[5])
             {
                 managelist[1] += 1;
+                if(managelist[1] > highscore)
+                {
+                    highscore = managelist[1];
+                }
                 managelist[5] = 0;
                 drawNumber(2,managelist[1]);
                 ctx.beginPath();
@@ -803,6 +812,10 @@ $(function(){
             if(managelist[2] == managelist[6])
             {
                 managelist[2] += 1;
+                if(managelist[2] > highscore)
+                {
+                    highscore = managelist[2];
+                }
                 managelist[6] = 0;
                 drawNumber(3,managelist[2]);
                 ctx.beginPath();
@@ -814,6 +827,10 @@ $(function(){
             else if(managelist[2] == 0)
             {
                 managelist[2] = managelist[6];
+                if(managelist[2] > highscore)
+                {
+                    highscore = managelist[2];
+                }
                 managelist[6] = 0;
                 drawNumber(3,managelist[2]);
                 ctx.beginPath();
@@ -828,6 +845,10 @@ $(function(){
             if (managelist[3] == managelist[7])
             {
                 managelist[3] += 1;
+                if(managelist[3] > highscore)
+                {
+                    highscore = managelist[3];
+                }
                 managelist[7] = 0;
                 drawNumber(4,managelist[3]);
                 ctx.beginPath();
@@ -853,6 +874,10 @@ $(function(){
             if (managelist[4] == managelist[8])
             {
                 managelist[4] += 1;
+                if(managelist[4] > highscore)
+                {
+                    highscore = managelist[4];
+                }
                 managelist[8] = 0;
                 drawNumber(5,managelist[4]);
                 ctx.beginPath();
@@ -864,6 +889,10 @@ $(function(){
             else if (managelist[4] == 0 && managelist[0] == managelist[8])
             {
                 managelist[0] += 1;
+                if(managelist[0] > highscore)
+                {
+                    highscore = managelist[0];
+                }
                 managelist[8] = 0;
                 drawNumber(1,managelist[0]);
                 ctx.beginPath();
@@ -900,6 +929,10 @@ $(function(){
             if (managelist[5] == managelist[9])
             {
                 managelist[5] += 1;
+                if(managelist[5] > highscore)
+                {
+                    highscore = managelist[5];
+                }
                 managelist[9] = 0;
                 drawNumber(6,managelist[5]);
                 ctx.beginPath();
@@ -911,6 +944,10 @@ $(function(){
             else if (managelist[5] == 0 && managelist[1] == managelist[9])
             {
                 managelist[1] += 1;
+                if(managelist[1] > highscore)
+                {
+                    highscore = managelist[1];
+                }
                 managelist[9] = 0;
                 drawNumber(2,managelist[1]);
                 ctx.beginPath();
@@ -947,6 +984,10 @@ $(function(){
             if (managelist[6] == managelist[10])
             {
                 managelist[6] += 1;
+                if(managelist[6] > highscore)
+                {
+                    highscore = managelist[6];
+                }
                 managelist[10] = 0;
                 drawNumber(7,managelist[6]);
                 ctx.beginPath();
@@ -958,6 +999,10 @@ $(function(){
             else if (managelist[6] == 0 && managelist[2] == managelist[10])
             {
                 managelist[2] += 1;
+                if(managelist[2] > highscore)
+                {
+                    highscore = managelist[2];
+                }
                 managelist[10] = 0;
                 drawNumber(3,managelist[2]);
                 ctx.beginPath();
@@ -994,6 +1039,10 @@ $(function(){
             if (managelist[7] == managelist[11])
             {
                 managelist[7] += 1;
+                if(managelist[7] > highscore)
+                {
+                    highscore = managelist[7];
+                }
                 managelist[11] = 0;
                 drawNumber(8,managelist[7]);
                 ctx.beginPath();
@@ -1005,6 +1054,10 @@ $(function(){
             else if (managelist[7] == 0 && managelist[3] == managelist[11])
             {
                 managelist[3] += 1;
+                if(managelist[3] > highscore)
+                {
+                    highscore = managelist[3];
+                }
                 managelist[11] = 0;
                 drawNumber(4,managelist[3]);
                 ctx.beginPath();
@@ -1041,6 +1094,10 @@ $(function(){
             if (managelist[8] == managelist[12])
             {
                 managelist[8] += 1;
+                if(managelist[8] > highscore)
+                {
+                    highscore = managelist[8];
+                }
                 managelist[12] = 0;
                 drawNumber(9,managelist[8]);
                 ctx.beginPath();
@@ -1052,6 +1109,10 @@ $(function(){
             else if (managelist[8] == 0 && managelist[4] == managelist[12])
             {
                 managelist[4] += 1;
+                if(managelist[4] > highscore)
+                {
+                    highscore = managelist[4];
+                }
                 managelist[12] = 0;
                 drawNumber(5,managelist[4]);
                 ctx.beginPath();
@@ -1063,6 +1124,10 @@ $(function(){
             else if (managelist[8] == 0 && managelist[4] == 0 && managelist[0] == managelist[12])
             {
                 managelist[0] += 1;
+                if(managelist[0] > highscore)
+                {
+                    highscore = managelist[0];
+                }
                 managelist[12] = 0;
                 drawNumber(1,managelist[0]);
                 ctx.beginPath();
@@ -1110,6 +1175,10 @@ $(function(){
             if (managelist[9] == managelist[13])
             {
                 managelist[9] += 1;
+                if(managelist[9] > highscore)
+                {
+                    highscore = managelist[9];
+                }
                 managelist[13] = 0;
                 drawNumber(10,managelist[9]);
                 ctx.beginPath();
@@ -1121,6 +1190,10 @@ $(function(){
             else if (managelist[9] == 0 && managelist[5] == managelist[13])
             {
                 managelist[5] += 1;
+                if(managelist[5] > highscore)
+                {
+                    highscore = managelist[5];
+                }
                 managelist[13] = 0;
                 drawNumber(6,managelist[5]);
                 ctx.beginPath();
@@ -1132,6 +1205,10 @@ $(function(){
             else if (managelist[9] == 0 && managelist[5] == 0 && managelist[1] == managelist[13])
             {
                 managelist[1] += 1;
+                if(managelist[1] > highscore)
+                {
+                    highscore = managelist[1];
+                }
                 managelist[13] = 0;
                 drawNumber(2,managelist[1]);
                 ctx.beginPath();
@@ -1179,6 +1256,10 @@ $(function(){
             if (managelist[10] == managelist[14])
             {
                 managelist[10] += 1;
+                if(managelist[10] > highscore)
+                {
+                    highscore = managelist[10];
+                }
                 managelist[14] = 0;
                 drawNumber(11,managelist[10]);
                 ctx.beginPath();
@@ -1190,6 +1271,10 @@ $(function(){
             else if (managelist[10] == 0 && managelist[6] == managelist[14])
             {
                 managelist[6] += 1;
+                    if(managelist[6] > highscore)
+                    {
+                        highscore = managelist[6];
+                    }
                 managelist[14] = 0;
                 drawNumber(7,managelist[6]);
                 ctx.beginPath();
@@ -1201,6 +1286,10 @@ $(function(){
             else if (managelist[10] == 0 && managelist[6] == 0 && managelist[2] == managelist[14])
             {
                 managelist[2] += 1;
+                if(managelist[2] > highscore)
+                {
+                    highscore = managelist[2];
+                }
                 managelist[14] = 0;
                 drawNumber(3,managelist[2]);
                 ctx.beginPath();
@@ -1248,6 +1337,10 @@ $(function(){
             if (managelist[11] == managelist[15])
             {
                 managelist[11] += 1;
+                if(managelist[11] > highscore)
+                {
+                    highscore = managelist[11];
+                }
                 managelist[15] = 0;
                 drawNumber(12,managelist[11]);
                 ctx.beginPath();
@@ -1259,6 +1352,10 @@ $(function(){
             else if (managelist[11] == 0 && managelist[7] == managelist[15])
             {
                 managelist[7] += 1;
+                if(managelist[7] > highscore)
+                {
+                    highscore = managelist[7];
+                }
                 managelist[15] = 0;
                 drawNumber(8,managelist[7]);
                 ctx.beginPath();
@@ -1270,6 +1367,10 @@ $(function(){
             else if (managelist[11] == 0 && managelist[7] == 0 && managelist[3] == managelist[15])
             {
                 managelist[3] += 1;
+                if(managelist[3] > highscore)
+                {
+                    highscore = managelist[3];
+                }
                 managelist[15] = 0;
                 drawNumber(4,managelist[3]);
                 ctx.beginPath();
@@ -1457,6 +1558,10 @@ $(function(){
         for(let i=0;i<16;i++)
         {
             if(managelist[i] !== 0) drawNumber(i+1, managelist[i]);
+            if(managelist[i] > highscore)
+            {
+                highscore = managelist[i];
+            }
         }
     }
 // ...existing code...
@@ -1468,7 +1573,96 @@ $(function(){
             Placenumber = randomInt(1,17);
         }
     }
-    Producednumber = randomInt(1,4);
+    console.log("Highscore: " + highscore);
+    if (highscore < 7)
+    {
+        Producednumber = randomInt(1,4);
+    }
+    else
+    {
+        if (managelist[0] < highscore - 5 && managelist[0] != 0)
+        {
+            managelist[0] = highscore - 5;
+            drawNumber(1,managelist[0]);
+        }
+        if (managelist[1] < highscore - 5 && managelist[1] != 0)
+        {
+            managelist[1] = highscore - 5;
+            drawNumber(2,managelist[1]);
+        }
+        if (managelist[2] < highscore - 5 && managelist[2] != 0)
+        {
+            managelist[2] = highscore - 5;
+            drawNumber(3,managelist[2]);
+        }
+        if (managelist[3] < highscore - 5 && managelist[3] != 0) 
+        {
+            managelist[3] = highscore - 5;
+            drawNumber(4,managelist[3]);
+        
+        }
+        if (managelist[4] < highscore - 5 && managelist[4] != 0)
+        {
+            managelist[4] = highscore - 5;
+            drawNumber(5,managelist[4]);
+        }
+        if (managelist[5] < highscore - 5 && managelist[5] != 0)
+        {
+            managelist[5] = highscore - 5;
+            drawNumber(6,managelist[5]);
+        }
+        if (managelist[6] < highscore - 5 && managelist[6] != 0)
+        {
+            managelist[6] = highscore - 5;
+            drawNumber(7,managelist[6]);
+        }
+        if (managelist[7] < highscore - 5 && managelist[7] != 0)
+        {
+            managelist[7] = highscore - 5;
+            drawNumber(8,managelist[7]);
+        }
+        if (managelist[8] < highscore - 5 && managelist[8] != 0)
+        {
+            managelist[8] = highscore - 5;
+            drawNumber(9,managelist[8]);
+        }
+        if (managelist[9] < highscore - 5 && managelist[9] != 0)
+        {
+            managelist[9] = highscore - 5;
+            drawNumber(10,managelist[9]);
+        }
+        if (managelist[10] < highscore - 5 && managelist[10] != 0)
+        {
+            managelist[10] = highscore - 5;
+            drawNumber(11,managelist[10]);
+        }
+        if (managelist[11] < highscore - 5 && managelist[11] != 0)
+        {
+            managelist[11] = highscore - 5;
+            drawNumber(12,managelist[11]);
+        }
+        if (managelist[12] < highscore - 5 && managelist[12] != 0)
+        {
+            managelist[12] = highscore - 5;
+            drawNumber(13,managelist[12]);
+        }
+        if (managelist[13] < highscore - 5 && managelist[13] != 0)
+        {
+            managelist[13] = highscore - 5;
+            drawNumber(14,managelist[13]);
+        }
+        if (managelist[14] < highscore - 5 && managelist[14] != 0)
+        {
+            managelist[14] = highscore - 5;
+            drawNumber(15,managelist[14]);
+        }
+        if (managelist[15] < highscore - 5 && managelist[15] != 0)
+        {
+            managelist[15] = highscore - 5;
+            drawNumber(16,managelist[15]);
+        }
+        Producednumber = randomInt(highscore - 5, highscore - 2);
+    }
     drawNumber(Placenumber,Producednumber);
     });
 });
