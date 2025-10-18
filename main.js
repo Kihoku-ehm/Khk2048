@@ -1,6 +1,8 @@
 $(function(){
   //console.log("s");
   managelist=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+  Displaynumber = 0;
+  Unit = "";
 
   const canvas = document.getElementById("myCanvas");
     const ctx = canvas.getContext("2d");
@@ -172,14 +174,110 @@ $(function(){
             }
             else if(Producednumber == 10)
             {
-                ctx.fillStyle = "#d00101";
+                ctx.fillStyle = "#8e1919ff";
+            }
+            else if (Producednumber == 11)
+            {
+                ctx.fillStyle = "#ad660eff";
+            }
+            else if (Producednumber == 12)
+            {
+                ctx.fillStyle = "#6b8e23ff";
+            }
+            else if (Producednumber == 13)
+            {
+                ctx.fillStyle = "#4682b4ff";
+            }
+            else if (Producednumber == 14)
+            {
+                ctx.fillStyle = "#7b68eeff";
+            }
+            else if (Producednumber == 15)
+            {
+                ctx.fillStyle = "#ff1493ff";
+            }
+            else if (Producednumber == 16)
+            {
+                ctx.fillStyle = "#ff4500ff";
+            }
+            else if (Producednumber == 17)
+            {
+                ctx.fillStyle = "#2f4f4fff";
+            }
+            else if (Producednumber == 18)
+            {
+                ctx.fillStyle = "#7b04abff";
+            }
+            else if (Producednumber == 19)
+            {
+                ctx.fillStyle = "#8f2d72ff";
+            }
+            else if (Producednumber == 20)
+            {
+                ctx.fillStyle = "#1c1cd0ff";
+            }
+            else if (Producednumber == 21)
+            {
+                ctx.fillStyle = "#d000d0ff";
+            }
+            else if (Producednumber == 22)
+            {
+                ctx.fillStyle = "#707522ff";
+            }
+            else if (Producednumber == 23)
+            {
+                ctx.fillStyle = "#e85353ff";
+            }
+            else if (Producednumber == 24)
+            {
+                ctx.fillStyle = "#1c3279ff";
+            }
+            else if (Producednumber == 25)
+            {
+                ctx.fillStyle = "#766185ff";
+            }
+            else if (Producednumber == 26)
+            {
+                ctx.fillStyle = "#225de6ff";
+            }
+            else if (Producednumber == 27)
+            {
+                ctx.fillStyle = "#4e183fff";
+            }
+            else if (Producednumber == 28)
+            {
+                ctx.fillStyle = "#14730aff";
+            }
+            else if (Producednumber == 29)
+            {
+                ctx.fillStyle = "#059097ff";
+            }
+            else if (Producednumber == 30)
+            {
+                ctx.fillStyle = "#000000ff";
+            }
+
+            if (Producednumber < 10)
+            {
+                Displaynumber = Producednumber;
+                Unit = "";
+            }
+            else if (Producednumber < 20)
+            {
+                Displaynumber = Producednumber - 10;
+                Unit = "K";
+            }
+            else if (Producednumber < 30)
+            {
+                Displaynumber = Producednumber - 20;
+                Unit = "M";
             }
             ctx.fill();
             ctx.closePath();
             ctx.font = "48px serif";
             ctx.fillStyle = "white";
             ctx.textAlign = "center";
-            ctx.fillText(2**Producednumber , 30 + Placenumber * 115 , 165);
+            ctx.fillText(2**Displaynumber + Unit , 30 + Placenumber * 115 , 165);
             managelist[Placenumber-1]=Producednumber;
         }
         else if(Placenumber < 9)
@@ -223,14 +321,110 @@ $(function(){
             }
             else if(Producednumber == 10)
             {
-                ctx.fillStyle = "#d00101";
+                ctx.fillStyle = "#8e1919ff";
+            }
+            else if (Producednumber == 11)
+            {
+                ctx.fillStyle = "#ad660eff";
+            }
+            else if (Producednumber == 12)
+            {
+                ctx.fillStyle = "#6b8e23ff";
+            }
+            else if (Producednumber == 13)
+            {
+                ctx.fillStyle = "#4682b4ff";
+            }
+            else if (Producednumber == 14)
+            {
+                ctx.fillStyle = "#7b68eeff";
+            }
+            else if (Producednumber == 15)
+            {
+                ctx.fillStyle = "#ff1493ff";
+            }
+            else if (Producednumber == 16)
+            {
+                ctx.fillStyle = "#ff4500ff";
+            }
+            else if (Producednumber == 17)
+            {
+                ctx.fillStyle = "#2f4f4fff";
+            }
+            else if (Producednumber == 18)
+            {
+                ctx.fillStyle = "#7b04abff";
+            }
+            else if (Producednumber == 19)
+            {
+                ctx.fillStyle = "#8f2d72ff";
+            }
+            else if (Producednumber == 20)
+            {
+                ctx.fillStyle = "#1c1cd0ff";
+            }
+            else if (Producednumber == 21)
+            {
+                ctx.fillStyle = "#d000d0ff";
+            }
+            else if (Producednumber == 22)
+            {
+                ctx.fillStyle = "#707522ff";
+            }
+            else if (Producednumber == 23)
+            {
+                ctx.fillStyle = "#e85353ff";
+            }
+            else if (Producednumber == 24)
+            {
+                ctx.fillStyle = "#1c3279ff";
+            }
+            else if (Producednumber == 25)
+            {
+                ctx.fillStyle = "#766185ff";
+            }
+            else if (Producednumber == 26)
+            {
+                ctx.fillStyle = "#225de6ff";
+            }
+            else if (Producednumber == 27)
+            {
+                ctx.fillStyle = "#4e183fff";
+            }
+            else if (Producednumber == 28)
+            {
+                ctx.fillStyle = "#14730aff";
+            }
+            else if (Producednumber == 29)
+            {
+                ctx.fillStyle = "#059097ff";
+            }
+            else if (Producednumber == 30)
+            {
+                ctx.fillStyle = "#000000ff";
+            }
+
+            if (Producednumber < 10)
+            {
+                Displaynumber = Producednumber;
+                Unit = "";
+            }
+            else if (Producednumber < 20)
+            {
+                Displaynumber = Producednumber - 10;
+                Unit = "K";
+            }
+            else if (Producednumber < 30)
+            {
+                Displaynumber = Producednumber - 20;
+                Unit = "M";
             }
             ctx.fill();
             ctx.closePath();
             ctx.font = "48px serif";
             ctx.fillStyle = "white";
             ctx.textAlign = "center";
-            ctx.fillText(2**Producednumber , 30+(Placenumber-4)*115, 280);
+            ctx.fillText(2**Displaynumber + Unit , 30+(Placenumber-4)*115, 280);
             managelist[Placenumber-1]=Producednumber;
         }
         else if(Placenumber < 13)
@@ -274,14 +468,110 @@ $(function(){
             }
             else if(Producednumber == 10)
             {
-                ctx.fillStyle = "#d00101";
+                ctx.fillStyle = "#8e1919ff";
+            }
+            else if (Producednumber == 11)
+            {
+                ctx.fillStyle = "#ad660eff";
+            }
+            else if (Producednumber == 12)
+            {
+                ctx.fillStyle = "#6b8e23ff";
+            }
+            else if (Producednumber == 13)
+            {
+                ctx.fillStyle = "#4682b4ff";
+            }
+            else if (Producednumber == 14)
+            {
+                ctx.fillStyle = "#7b68eeff";
+            }
+            else if (Producednumber == 15)
+            {
+                ctx.fillStyle = "#ff1493ff";
+            }
+            else if (Producednumber == 16)
+            {
+                ctx.fillStyle = "#ff4500ff";
+            }
+            else if (Producednumber == 17)
+            {
+                ctx.fillStyle = "#2f4f4fff";
+            }
+            else if (Producednumber == 18)
+            {
+                ctx.fillStyle = "#7b04abff";
+            }
+            else if (Producednumber == 19)
+            {
+                ctx.fillStyle = "#8f2d72ff";
+            }
+            else if (Producednumber == 20)
+            {
+                ctx.fillStyle = "#1c1cd0ff";
+            }
+            else if (Producednumber == 21)
+            {
+                ctx.fillStyle = "#d000d0ff";
+            }
+            else if (Producednumber == 22)
+            {
+                ctx.fillStyle = "#707522ff";
+            }
+            else if (Producednumber == 23)
+            {
+                ctx.fillStyle = "#e85353ff";
+            }
+            else if (Producednumber == 24)
+            {
+                ctx.fillStyle = "#1c3279ff";
+            }
+            else if (Producednumber == 25)
+            {
+                ctx.fillStyle = "#766185ff";
+            }
+            else if (Producednumber == 26)
+            {
+                ctx.fillStyle = "#225de6ff";
+            }
+            else if (Producednumber == 27)
+            {
+                ctx.fillStyle = "#4e183fff";
+            }
+            else if (Producednumber == 28)
+            {
+                ctx.fillStyle = "#14730aff";
+            }
+            else if (Producednumber == 29)
+            {
+                ctx.fillStyle = "#059097ff";
+            }
+            else if (Producednumber == 30)
+            {
+                ctx.fillStyle = "#000000ff";
+            }
+
+            if (Producednumber < 10)
+            {
+                Displaynumber = Producednumber;
+                Unit = "";
+            }
+            else if (Producednumber < 20)
+            {
+                Displaynumber = Producednumber - 10;
+                Unit = "K";
+            }
+            else if (Producednumber < 30)
+            {
+                Displaynumber = Producednumber - 20;
+                Unit = "M";
             }
             ctx.fill();
             ctx.closePath();
             ctx.font = "48px serif";
             ctx.fillStyle = "white";
             ctx.textAlign = "center";
-            ctx.fillText(2**Producednumber , 30 + (Placenumber - 8) * 115, 395);
+            ctx.fillText(2**Displaynumber + Unit , 30 + (Placenumber - 8) * 115, 395);
             managelist[Placenumber-1]=Producednumber;
         }
         else
@@ -325,14 +615,110 @@ $(function(){
             }
             else if(Producednumber == 10)
             {
-                ctx.fillStyle = "#d00101";
+                ctx.fillStyle = "#8e1919ff";
+            }
+            else if (Producednumber == 11)
+            {
+                ctx.fillStyle = "#ad660eff";
+            }
+            else if (Producednumber == 12)
+            {
+                ctx.fillStyle = "#6b8e23ff";
+            }
+            else if (Producednumber == 13)
+            {
+                ctx.fillStyle = "#4682b4ff";
+            }
+            else if (Producednumber == 14)
+            {
+                ctx.fillStyle = "#7b68eeff";
+            }
+            else if (Producednumber == 15)
+            {
+                ctx.fillStyle = "#ff1493ff";
+            }
+            else if (Producednumber == 16)
+            {
+                ctx.fillStyle = "#ff4500ff";
+            }
+            else if (Producednumber == 17)
+            {
+                ctx.fillStyle = "#2f4f4fff";
+            }
+            else if (Producednumber == 18)
+            {
+                ctx.fillStyle = "#7b04abff";
+            }
+            else if (Producednumber == 19)
+            {
+                ctx.fillStyle = "#8f2d72ff";
+            }
+            else if (Producednumber == 20)
+            {
+                ctx.fillStyle = "#1c1cd0ff";
+            }
+            else if (Producednumber == 21)
+            {
+                ctx.fillStyle = "#d000d0ff";
+            }
+            else if (Producednumber == 22)
+            {
+                ctx.fillStyle = "#707522ff";
+            }
+            else if (Producednumber == 23)
+            {
+                ctx.fillStyle = "#e85353ff";
+            }
+            else if (Producednumber == 24)
+            {
+                ctx.fillStyle = "#1c3279ff";
+            }
+            else if (Producednumber == 25)
+            {
+                ctx.fillStyle = "#766185ff";
+            }
+            else if (Producednumber == 26)
+            {
+                ctx.fillStyle = "#225de6ff";
+            }
+            else if (Producednumber == 27)
+            {
+                ctx.fillStyle = "#4e183fff";
+            }
+            else if (Producednumber == 28)
+            {
+                ctx.fillStyle = "#14730aff";
+            }
+            else if (Producednumber == 29)
+            {
+                ctx.fillStyle = "#059097ff";
+            }
+            else if (Producednumber == 30)
+            {
+                ctx.fillStyle = "#000000ff";
+            }
+
+            if (Producednumber < 10)
+            {
+                Displaynumber = Producednumber;
+                Unit = "";
+            }
+            else if (Producednumber < 20)
+            {
+                Displaynumber = Producednumber - 10;
+                Unit = "K";
+            }
+            else if (Producednumber < 30)
+            {
+                Displaynumber = Producednumber - 20;
+                Unit = "M";
             }
             ctx.fill();
             ctx.closePath();
             ctx.font = "48px serif";
             ctx.fillStyle = "white";
             ctx.textAlign = "center";
-            ctx.fillText(2**Producednumber , 30 + (Placenumber - 12) * 115, 510);
+            ctx.fillText(2**Displaynumber + Unit , 30 + (Placenumber - 12) * 115, 510);
             managelist[Placenumber-1]=Producednumber;
         }
         console.log(managelist);
@@ -926,7 +1312,154 @@ $(function(){
                 ctx.closePath();
             }
         }
+    }// ここに ArrowDown / ArrowRight / ArrowLeft を追加
+    else if(event.key == "ArrowDown")
+    {
+        // 下方向にスライド & マージ
+        function compressAndMerge(arr)
+        {
+            const tmp = arr.filter(v=>v!==0);
+            const res = [];
+            for(let i=tmp.length-1;i>=0;i--)
+            {
+                if(i>0 && tmp[i] === tmp[i-1])
+                {
+                    res.unshift(tmp[i]+1);
+                    i--; // skip merged
+                }
+                else
+                {
+                    res.unshift(tmp[i]);
+                }
+            }
+            while(res.length<4) res.unshift(0);
+            return res;
+        }
+        const newList = managelist.slice();
+        for(let col=0;col<4;col++)
+        {
+            const colVals = [managelist[col], managelist[col+4], managelist[col+8], managelist[col+12]];
+            const merged = compressAndMerge(colVals);
+            for(let row=0;row<4;row++) newList[col + row*4] = merged[row];
+        }
+        // 盤面を更新・再描画
+        managelist = newList.slice();
+        // 背景 (空マス) を全部描画
+        for(let i=0;i<16;i++)
+        {
+            const row = Math.floor(i/4);
+            const col = i%4;
+            const x = 100 + col*115;
+            const y = 100 + row*115;
+            ctx.beginPath();
+            ctx.rect(x,y,95,95);
+            ctx.fillStyle = "#f5deb3";
+            ctx.fill();
+            ctx.closePath();
+        }
+        // 数字を描く
+        for(let i=0;i<16;i++)
+        {
+            if(managelist[i] !== 0) drawNumber(i+1, managelist[i]);
+        }
     }
+    else if(event.key == "ArrowRight")
+    {
+        // 右方向にスライド & マージ
+        function compressAndMergeRow(arr)
+        {
+            const tmp = arr.filter(v=>v!==0);
+            const res = [];
+            for(let i=tmp.length-1;i>=0;i--)
+            {
+                if(i>0 && tmp[i] === tmp[i-1])
+                {
+                    res.unshift(tmp[i]+1);
+                    i--;
+                }
+                else
+                {
+                    res.unshift(tmp[i]);
+                }
+            }
+            while(res.length<4) res.unshift(0);
+            return res;
+        }
+        const newList = managelist.slice();
+        for(let row=0;row<4;row++)
+        {
+            const base = row*4;
+            const rowVals = [managelist[base], managelist[base+1], managelist[base+2], managelist[base+3]];
+            const merged = compressAndMergeRow(rowVals);
+            for(let col=0;col<4;col++) newList[base + col] = merged[col];
+        }
+        managelist = newList.slice();
+        for(let i=0;i<16;i++)
+        {
+            const row = Math.floor(i/4);
+            const col = i%4;
+            const x = 100 + col*115;
+            const y = 100 + row*115;
+            ctx.beginPath();
+            ctx.rect(x,y,95,95);
+            ctx.fillStyle = "#f5deb3";
+            ctx.fill();
+            ctx.closePath();
+        }
+        for(let i=0;i<16;i++)
+        {
+            if(managelist[i] !== 0) drawNumber(i+1, managelist[i]);
+        }
+    }
+    else if(event.key == "ArrowLeft")
+    {
+        // 左方向にスライド & マージ
+        function compressAndMergeRowLeft(arr)
+        {
+            const tmp = arr.filter(v=>v!==0);
+            const res = [];
+            for(let i=0;i<tmp.length;i++)
+            {
+                if(i+1<tmp.length && tmp[i] === tmp[i+1])
+                {
+                    res.push(tmp[i]+1);
+                    i++;
+                }
+                else
+                {
+                    res.push(tmp[i]);
+                }
+            }
+            while(res.length<4) res.push(0);
+            return res;
+        }
+        const newList = managelist.slice();
+        for(let row=0;row<4;row++)
+        {
+            const base = row*4;
+            const rowVals = [managelist[base], managelist[base+1], managelist[base+2], managelist[base+3]];
+            const merged = compressAndMergeRowLeft(rowVals);
+            for(let col=0;col<4;col++) newList[base + col] = merged[col];
+        }
+        managelist = newList.slice();
+        for(let i=0;i<16;i++)
+        {
+            const row = Math.floor(i/4);
+            const col = i%4;
+            const x = 100 + col*115;
+            const y = 100 + row*115;
+            ctx.beginPath();
+            ctx.rect(x,y,95,95);
+            ctx.fillStyle = "#f5deb3";
+            ctx.fill();
+            ctx.closePath();
+        }
+        for(let i=0;i<16;i++)
+        {
+            if(managelist[i] !== 0) drawNumber(i+1, managelist[i]);
+        }
+    }
+// ...existing code...
     Placenumber = randomInt(1,17);
     if(managelist[Placenumber-1] != 0)
     {
