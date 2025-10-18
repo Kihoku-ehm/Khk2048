@@ -359,6 +359,574 @@ $(function(){
     // 変数eventの中身はKeyboardEventオブジェクト
     console.log(event);
     console.log(event.key); // 押されたキーの情報
+    if(event.key == "ArrowUp")
+    {
+        //console.log("up");
+        if(managelist[4] != 0)
+        {
+            if(managelist[0] == managelist[4])
+            {
+                managelist[0] += 1;
+                managelist[4] = 0;
+                drawNumber(1,managelist[0]);
+                ctx.beginPath();
+                ctx.rect(100,215,95,95);
+                ctx.fillStyle = "#f5deb3";
+                ctx.fill();
+                ctx.closePath();
+            }
+            else if(managelist[0] == 0)
+            {
+                managelist[0] = managelist[4];
+                managelist[4] = 0;
+                drawNumber(1,managelist[0]);
+                ctx.beginPath();
+                ctx.rect(100,215,95,95);
+                ctx.fillStyle = "#f5deb3";
+                ctx.fill();
+                ctx.closePath();
+            }
+        }
+        if (managelist[5] != 0)
+        {
+            if(managelist[1] == managelist[5])
+            {
+                managelist[1] += 1;
+                managelist[5] = 0;
+                drawNumber(2,managelist[1]);
+                ctx.beginPath();
+                ctx.rect(215,215,95,95);
+                ctx.fillStyle = "#f5deb3";
+                ctx.fill();
+                ctx.closePath();
+            }
+            else if(managelist[1] == 0)
+            {
+                managelist[1] = managelist[5];
+                managelist[5] = 0;
+                drawNumber(2,managelist[1]);
+                ctx.beginPath();
+                ctx.rect(215,215,95,95);
+                ctx.fillStyle = "#f5deb3";
+                ctx.fill();
+                ctx.closePath();
+            }
+        }
+        if (managelist[6] != 0)
+        {
+            if(managelist[2] == managelist[6])
+            {
+                managelist[2] += 1;
+                managelist[6] = 0;
+                drawNumber(3,managelist[2]);
+                ctx.beginPath();
+                ctx.rect(330,215,95,95);
+                ctx.fillStyle = "#f5deb3";
+                ctx.fill();
+                ctx.closePath();
+            }
+            else if(managelist[2] == 0)
+            {
+                managelist[2] = managelist[6];
+                managelist[6] = 0;
+                drawNumber(3,managelist[2]);
+                ctx.beginPath();
+                ctx.rect(330,215,95,95);
+                ctx.fillStyle = "#f5deb3";
+                ctx.fill();
+                ctx.closePath();
+            }
+        }
+        if (managelist[7] != 0)
+        {
+            if (managelist[3] == managelist[7])
+            {
+                managelist[3] += 1;
+                managelist[7] = 0;
+                drawNumber(4,managelist[3]);
+                ctx.beginPath();
+                ctx.rect(445,215,95,95);
+                ctx.fillStyle = "#f5deb3";
+                ctx.fill();
+                ctx.closePath();
+            }
+            else if (managelist[3] == 0)
+            {
+                managelist[3] = managelist[7];
+                managelist[7] = 0;
+                drawNumber(4,managelist[3]);
+                ctx.beginPath();
+                ctx.rect(445,215,95,95);
+                ctx.fillStyle = "#f5deb3";
+                ctx.fill();
+                ctx.closePath();
+            }
+        }
+        if (managelist[8] != 0)
+        {
+            if (managelist[4] == managelist[8])
+            {
+                managelist[4] += 1;
+                managelist[8] = 0;
+                drawNumber(5,managelist[4]);
+                ctx.beginPath();
+                ctx.rect(100,330,95,95);
+                ctx.fillStyle = "#f5deb3";
+                ctx.fill();
+                ctx.closePath();
+            }
+            else if (managelist[4] == 0 && managelist[0] == managelist[8])
+            {
+                managelist[0] += 1;
+                managelist[8] = 0;
+                drawNumber(1,managelist[0]);
+                ctx.beginPath();
+                ctx.rect(100,330,95,95);
+                ctx.fillStyle = "#f5deb3";
+                ctx.fill();
+                ctx.closePath();
+            }
+            else if (managelist[4] == 0 && managelist[0] != 0)
+            {
+                managelist[4] = managelist[8];
+                managelist[8] = 0;
+                drawNumber(5,managelist[4]);
+                ctx.beginPath();
+                ctx.rect(100,330,95,95);
+                ctx.fillStyle = "#f5deb3";
+                ctx.fill();
+                ctx.closePath();
+            }
+            else if (managelist[4] == 0 && managelist[0] == 0)
+            {
+                managelist[0] = managelist[8];
+                managelist[8] = 0;
+                drawNumber(1,managelist[0]);
+                ctx.beginPath();
+                ctx.rect(100,330,95,95);
+                ctx.fillStyle = "#f5deb3";
+                ctx.fill();
+                ctx.closePath();
+            }
+        }
+        if (managelist[9] != 0)
+        {
+            if (managelist[5] == managelist[9])
+            {
+                managelist[5] += 1;
+                managelist[9] = 0;
+                drawNumber(6,managelist[5]);
+                ctx.beginPath();
+                ctx.rect(215,330,95,95);
+                ctx.fillStyle = "#f5deb3";
+                ctx.fill();
+                ctx.closePath();
+            }
+            else if (managelist[5] == 0 && managelist[1] == managelist[9])
+            {
+                managelist[1] += 1;
+                managelist[9] = 0;
+                drawNumber(2,managelist[1]);
+                ctx.beginPath();
+                ctx.rect(215,330,95,95);
+                ctx.fillStyle = "#f5deb3";
+                ctx.fill();
+                ctx.closePath();
+            }
+            else if (managelist[5] == 0 && managelist[1] != 0)
+            {
+                managelist[5] = managelist[9];
+                managelist[9] = 0;
+                drawNumber(6,managelist[5]);
+                ctx.beginPath();
+                ctx.rect(215,330,95,95);
+                ctx.fillStyle = "#f5deb3";
+                ctx.fill();
+                ctx.closePath();
+            }
+            else if (managelist[5] == 0 && managelist[1] == 0)
+            {
+                managelist[1] = managelist[9];
+                managelist[9] = 0;
+                drawNumber(2,managelist[1]);
+                ctx.beginPath();
+                ctx.rect(215,330,95,95);
+                ctx.fillStyle = "#f5deb3";
+                ctx.fill();
+                ctx.closePath();
+            }
+        }
+        if (managelist[10] != 0)
+        {
+            if (managelist[6] == managelist[10])
+            {
+                managelist[6] += 1;
+                managelist[10] = 0;
+                drawNumber(7,managelist[6]);
+                ctx.beginPath();
+                ctx.rect(330,330,95,95);
+                ctx.fillStyle = "#f5deb3";
+                ctx.fill();
+                ctx.closePath();
+            }
+            else if (managelist[6] == 0 && managelist[2] == managelist[10])
+            {
+                managelist[2] += 1;
+                managelist[10] = 0;
+                drawNumber(3,managelist[2]);
+                ctx.beginPath();
+                ctx.rect(330,330,95,95);
+                ctx.fillStyle = "#f5deb3";
+                ctx.fill();
+                ctx.closePath();
+            }
+            else if (managelist[6] == 0 && managelist[2] != 0)
+            {
+                managelist[6] = managelist[10];
+                managelist[10] = 0;
+                drawNumber(7,managelist[6]);
+                ctx.beginPath();
+                ctx.rect(330,330,95,95);
+                ctx.fillStyle = "#f5deb3";
+                ctx.fill();
+                ctx.closePath();
+            }
+            else if (managelist[6] == 0 && managelist[2] == 0)
+            {
+                managelist[2] = managelist[10];
+                managelist[10] = 0;
+                drawNumber(3,managelist[2]);
+                ctx.beginPath();
+                ctx.rect(330,330,95,95);
+                ctx.fillStyle = "#f5deb3";
+                ctx.fill();
+                ctx.closePath();
+            }
+        }
+        if (managelist[11] != 0)
+        {
+            if (managelist[7] == managelist[11])
+            {
+                managelist[7] += 1;
+                managelist[11] = 0;
+                drawNumber(8,managelist[7]);
+                ctx.beginPath();
+                ctx.rect(445,330,95,95);
+                ctx.fillStyle = "#f5deb3";
+                ctx.fill();
+                ctx.closePath();
+            }
+            else if (managelist[7] == 0 && managelist[3] == managelist[11])
+            {
+                managelist[3] += 1;
+                managelist[11] = 0;
+                drawNumber(4,managelist[3]);
+                ctx.beginPath();
+                ctx.rect(445,330,95,95);
+                ctx.fillStyle = "#f5deb3";
+                ctx.fill();
+                ctx.closePath();
+            }
+            else if (managelist[7] == 0 && managelist[3] != 0)
+            {
+                managelist[7] = managelist[11];
+                managelist[11] = 0;
+                drawNumber(8,managelist[7]);
+                ctx.beginPath();
+                ctx.rect(445,330,95,95);
+                ctx.fillStyle = "#f5deb3";
+                ctx.fill();
+                ctx.closePath();
+            }
+            else if (managelist[7] == 0 && managelist[3] == 0)
+            {
+                managelist[3] = managelist[11];
+                managelist[11] = 0;
+                drawNumber(4,managelist[3]);
+                ctx.beginPath();
+                ctx.rect(445,330,95,95);
+                ctx.fillStyle = "#f5deb3";
+                ctx.fill();
+                ctx.closePath();
+            }
+        }
+        if (managelist[12] != 0)
+        {
+            if (managelist[8] == managelist[12])
+            {
+                managelist[8] += 1;
+                managelist[12] = 0;
+                drawNumber(9,managelist[8]);
+                ctx.beginPath();
+                ctx.rect(100,445,95,95);
+                ctx.fillStyle = "#f5deb3";
+                ctx.fill();
+                ctx.closePath();
+            }
+            else if (managelist[8] == 0 && managelist[4] == managelist[12])
+            {
+                managelist[4] += 1;
+                managelist[12] = 0;
+                drawNumber(5,managelist[4]);
+                ctx.beginPath();
+                ctx.rect(100,445,95,95);
+                ctx.fillStyle = "#f5deb3";
+                ctx.fill();
+                ctx.closePath();
+            }
+            else if (managelist[8] == 0 && managelist[4] == 0 && managelist[0] == managelist[12])
+            {
+                managelist[0] += 1;
+                managelist[12] = 0;
+                drawNumber(1,managelist[0]);
+                ctx.beginPath();
+                ctx.rect(100,445,95,95);
+                ctx.fillStyle = "#f5deb3";
+                ctx.fill();
+                ctx.closePath();
+            }
+            else if (managelist[8] == 0 && managelist[4] != 0 && managelist[0] != 0)
+            {
+                managelist[8] = managelist[12];
+                managelist[12] = 0;
+                drawNumber(9,managelist[8]);
+                ctx.beginPath();
+                ctx.rect(100,445,95,95);
+                ctx.fillStyle = "#f5deb3";
+                ctx.fill();
+                ctx.closePath();
+            }
+            else if (managelist[8] == 0 && managelist[4] == 0 && managelist[0] != 0)
+            {
+                managelist[4] = managelist[12];
+                managelist[12] = 0;
+                drawNumber(5,managelist[4]);
+                ctx.beginPath();
+                ctx.rect(100,445,95,95);
+                ctx.fillStyle = "#f5deb3";
+                ctx.fill();
+                ctx.closePath();
+            }
+            else if (managelist[8] == 0 && managelist[4] == 0 && managelist[0] == 0)
+            {
+                managelist[0] = managelist[12];
+                managelist[12] = 0;
+                drawNumber(1,managelist[0]);
+                ctx.beginPath();
+                ctx.rect(100,445,95,95);
+                ctx.fillStyle = "#f5deb3";
+                ctx.fill();
+                ctx.closePath();
+            }
+        }
+        if (managelist[13] != 0)
+        {
+            if (managelist[9] == managelist[13])
+            {
+                managelist[9] += 1;
+                managelist[13] = 0;
+                drawNumber(10,managelist[9]);
+                ctx.beginPath();
+                ctx.rect(215,445,95,95);
+                ctx.fillStyle = "#f5deb3";
+                ctx.fill();
+                ctx.closePath();
+            }
+            else if (managelist[9] == 0 && managelist[5] == managelist[13])
+            {
+                managelist[5] += 1;
+                managelist[13] = 0;
+                drawNumber(6,managelist[5]);
+                ctx.beginPath();
+                ctx.rect(215,445,95,95);
+                ctx.fillStyle = "#f5deb3";
+                ctx.fill();
+                ctx.closePath();
+            }
+            else if (managelist[9] == 0 && managelist[5] == 0 && managelist[1] == managelist[13])
+            {
+                managelist[1] += 1;
+                managelist[13] = 0;
+                drawNumber(2,managelist[1]);
+                ctx.beginPath();
+                ctx.rect(215,445,95,95);
+                ctx.fillStyle = "#f5deb3";
+                ctx.fill();
+                ctx.closePath();
+            }
+            else if (managelist[9] == 0 && managelist[5] != 0 && managelist[1] != 0)
+                {
+                    managelist[9] = managelist[13];
+                    managelist[13] = 0;
+                    drawNumber(10,managelist[9]);
+                    ctx.beginPath();
+                    ctx.rect(215,445,95,95);
+                    ctx.fillStyle = "#f5deb3";
+                    ctx.fill();
+                    ctx.closePath();
+                }
+            else if (managelist[9] == 0 && managelist[5] == 0 && managelist[1] != 0)
+            {
+                managelist[5] = managelist[13];
+                managelist[13] = 0;
+                drawNumber(6,managelist[5]);
+                ctx.beginPath();
+                ctx.rect(215,445,95,95);
+                ctx.fillStyle = "#f5deb3";
+                ctx.fill();
+                ctx.closePath();
+            }
+            else if (managelist[9] == 0 && managelist[5] == 0 && managelist[1] == 0)
+            {
+                managelist[1] = managelist[13];
+                managelist[13] = 0;
+                drawNumber(2,managelist[1]);
+                ctx.beginPath();
+                ctx.rect(215,445,95,95);
+                ctx.fillStyle = "#f5deb3";
+                ctx.fill();
+                ctx.closePath();
+            }
+        }
+        if (managelist[14] != 0)
+        {
+            if (managelist[10] == managelist[14])
+            {
+                managelist[10] += 1;
+                managelist[14] = 0;
+                drawNumber(11,managelist[10]);
+                ctx.beginPath();
+                ctx.rect(330,445,95,95);
+                ctx.fillStyle = "#f5deb3";
+                ctx.fill();
+                ctx.closePath();
+            }
+            else if (managelist[10] == 0 && managelist[6] == managelist[14])
+            {
+                managelist[6] += 1;
+                managelist[14] = 0;
+                drawNumber(7,managelist[6]);
+                ctx.beginPath();
+                ctx.rect(330,445,95,95);
+                ctx.fillStyle = "#f5deb3";
+                ctx.fill();
+                ctx.closePath();
+            }
+            else if (managelist[10] == 0 && managelist[6] == 0 && managelist[2] == managelist[14])
+            {
+                managelist[2] += 1;
+                managelist[14] = 0;
+                drawNumber(3,managelist[2]);
+                ctx.beginPath();
+                ctx.rect(330,445,95,95);
+                ctx.fillStyle = "#f5deb3";
+                ctx.fill();
+                ctx.closePath();
+            }
+            else if (managelist[10] == 0 && managelist[6] != 0 && managelist[2] != 0)
+            {
+                managelist[10] = managelist[14];
+                managelist[14] = 0;
+                drawNumber(11,managelist[10]);
+                ctx.beginPath();
+                ctx.rect(330,445,95,95);
+                ctx.fillStyle = "#f5deb3";
+                ctx.fill();
+                ctx.closePath();
+            }
+            else if (managelist[10] == 0 && managelist[6] == 0 && managelist[2] != 0)
+            {
+                managelist[6] = managelist[14];
+                managelist[14] = 0;
+                drawNumber(7,managelist[6]);
+                ctx.beginPath();
+                ctx.rect(330,445,95,95);
+                ctx.fillStyle = "#f5deb3";
+                ctx.fill();
+                ctx.closePath();
+            }
+            else if (managelist[10] == 0 && managelist[6] == 0 && managelist[2] == 0)
+            {
+                managelist[2] = managelist[14];
+                managelist[14] = 0;
+                drawNumber(3,managelist[2]);
+                ctx.beginPath();
+                ctx.rect(330,445,95,95);
+                ctx.fillStyle = "#f5deb3";
+                ctx.fill();
+                ctx.closePath();
+            }
+        }
+        if (managelist[15] != 0)
+        {
+            if (managelist[11] == managelist[15])
+            {
+                managelist[11] += 1;
+                managelist[15] = 0;
+                drawNumber(12,managelist[11]);
+                ctx.beginPath();
+                ctx.rect(445,445,95,95);
+                ctx.fillStyle = "#f5deb3";
+                ctx.fill();
+                ctx.closePath();
+            }
+            else if (managelist[11] == 0 && managelist[7] == managelist[15])
+            {
+                managelist[7] += 1;
+                managelist[15] = 0;
+                drawNumber(8,managelist[7]);
+                ctx.beginPath();
+                ctx.rect(445,445,95,95);
+                ctx.fillStyle = "#f5deb3";
+                ctx.fill();
+                ctx.closePath();
+            }
+            else if (managelist[11] == 0 && managelist[7] == 0 && managelist[3] == managelist[15])
+            {
+                managelist[3] += 1;
+                managelist[15] = 0;
+                drawNumber(4,managelist[3]);
+                ctx.beginPath();
+                ctx.rect(445,445,95,95);
+                ctx.fillStyle = "#f5deb3";
+                ctx.fill();
+                ctx.closePath();
+            }
+            else if (managelist[11] == 0 && managelist[7] != 0 && managelist[3] != 0)
+            {
+                managelist[11] = managelist[15];
+                managelist[15] = 0;
+                drawNumber(12,managelist[11]);
+                ctx.beginPath();
+                ctx.rect(445,445,95,95);
+                ctx.fillStyle = "#f5deb3";
+                ctx.fill();
+                ctx.closePath();
+            }
+            else if (managelist[11] == 0 && managelist[7] == 0 && managelist[3] != 0)
+            {
+                managelist[7] = managelist[15];
+                managelist[15] = 0;
+                drawNumber(8,managelist[7]);
+                ctx.beginPath();
+                ctx.rect(445,445,95,95);
+                ctx.fillStyle = "#f5deb3";
+                ctx.fill();
+                ctx.closePath();
+            }
+            else if (managelist[11] == 0 && managelist[7] == 0 && managelist[3] == 0)
+            {
+                managelist[3] = managelist[15];
+                managelist[15] = 0;
+                drawNumber(4,managelist[3]);
+                ctx.beginPath();
+                ctx.rect(445,445,95,95);
+                ctx.fillStyle = "#f5deb3";
+                ctx.fill();
+                ctx.closePath();
+            }
+        }
+    }
     Placenumber = randomInt(1,17);
     if(managelist[Placenumber-1] != 0)
     {
