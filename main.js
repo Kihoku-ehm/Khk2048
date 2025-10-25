@@ -4,6 +4,8 @@ $(function(){
   Displaynumber = 0;
   Unit = "";
   highscore = 0;
+  const Merged = document.querySelector("#MS");
+  const Achieved = document.querySelector("#AS");
 
   const canvas = document.getElementById("myCanvas");
     const ctx = canvas.getContext("2d");
@@ -280,6 +282,14 @@ $(function(){
             ctx.textAlign = "center";
             ctx.fillText(2**Displaynumber + Unit , 30 + Placenumber * 115 , 165);
             managelist[Placenumber-1]=Producednumber;
+            for(let i=0;i<16;i++)
+            {
+                if(managelist[i] > highscore)
+                {
+                    highscore = managelist[i];
+                    Achieved.play();
+                }
+            }
         }
         else if(Placenumber < 9)
         {
@@ -427,6 +437,14 @@ $(function(){
             ctx.textAlign = "center";
             ctx.fillText(2**Displaynumber + Unit , 30+(Placenumber-4)*115, 280);
             managelist[Placenumber-1]=Producednumber;
+            for(let i=0;i<16;i++)
+            {
+                if(managelist[i] > highscore)
+                {
+                    highscore = managelist[i];
+                    Achieved.play();
+                }
+            }
         }
         else if(Placenumber < 13)
         {
@@ -574,6 +592,14 @@ $(function(){
             ctx.textAlign = "center";
             ctx.fillText(2**Displaynumber + Unit , 30 + (Placenumber - 8) * 115, 395);
             managelist[Placenumber-1]=Producednumber;
+            for(let i=0;i<16;i++)
+            {
+                if(managelist[i] > highscore)
+                {
+                    highscore = managelist[i];
+                    Achieved.play();
+                }
+            }
         }
         else
         {
@@ -721,6 +747,14 @@ $(function(){
             ctx.textAlign = "center";
             ctx.fillText(2**Displaynumber + Unit , 30 + (Placenumber - 12) * 115, 510);
             managelist[Placenumber-1]=Producednumber;
+            for(let i=0;i<16;i++)
+            {
+                if(managelist[i] > highscore)
+                {
+                    highscore = managelist[i];
+                    Achieved.play();
+                }
+            }
         }
         //console.log(managelist);
     }
@@ -754,10 +788,6 @@ $(function(){
             if(managelist[0] == managelist[4])
             {
                 managelist[0] += 1;
-                if(managelist[0] > highscore)
-                {
-                    highscore = managelist[0];
-                }
                 managelist[4] = 0;
                 drawNumber(1,managelist[0]);
                 ctx.beginPath();
@@ -783,10 +813,6 @@ $(function(){
             if(managelist[1] == managelist[5])
             {
                 managelist[1] += 1;
-                if(managelist[1] > highscore)
-                {
-                    highscore = managelist[1];
-                }
                 managelist[5] = 0;
                 drawNumber(2,managelist[1]);
                 ctx.beginPath();
@@ -812,10 +838,6 @@ $(function(){
             if(managelist[2] == managelist[6])
             {
                 managelist[2] += 1;
-                if(managelist[2] > highscore)
-                {
-                    highscore = managelist[2];
-                }
                 managelist[6] = 0;
                 drawNumber(3,managelist[2]);
                 ctx.beginPath();
@@ -827,10 +849,6 @@ $(function(){
             else if(managelist[2] == 0)
             {
                 managelist[2] = managelist[6];
-                if(managelist[2] > highscore)
-                {
-                    highscore = managelist[2];
-                }
                 managelist[6] = 0;
                 drawNumber(3,managelist[2]);
                 ctx.beginPath();
@@ -845,10 +863,6 @@ $(function(){
             if (managelist[3] == managelist[7])
             {
                 managelist[3] += 1;
-                if(managelist[3] > highscore)
-                {
-                    highscore = managelist[3];
-                }
                 managelist[7] = 0;
                 drawNumber(4,managelist[3]);
                 ctx.beginPath();
@@ -874,10 +888,6 @@ $(function(){
             if (managelist[4] == managelist[8])
             {
                 managelist[4] += 1;
-                if(managelist[4] > highscore)
-                {
-                    highscore = managelist[4];
-                }
                 managelist[8] = 0;
                 drawNumber(5,managelist[4]);
                 ctx.beginPath();
@@ -889,10 +899,6 @@ $(function(){
             else if (managelist[4] == 0 && managelist[0] == managelist[8])
             {
                 managelist[0] += 1;
-                if(managelist[0] > highscore)
-                {
-                    highscore = managelist[0];
-                }
                 managelist[8] = 0;
                 drawNumber(1,managelist[0]);
                 ctx.beginPath();
@@ -929,10 +935,6 @@ $(function(){
             if (managelist[5] == managelist[9])
             {
                 managelist[5] += 1;
-                if(managelist[5] > highscore)
-                {
-                    highscore = managelist[5];
-                }
                 managelist[9] = 0;
                 drawNumber(6,managelist[5]);
                 ctx.beginPath();
@@ -944,10 +946,6 @@ $(function(){
             else if (managelist[5] == 0 && managelist[1] == managelist[9])
             {
                 managelist[1] += 1;
-                if(managelist[1] > highscore)
-                {
-                    highscore = managelist[1];
-                }
                 managelist[9] = 0;
                 drawNumber(2,managelist[1]);
                 ctx.beginPath();
@@ -984,10 +982,6 @@ $(function(){
             if (managelist[6] == managelist[10])
             {
                 managelist[6] += 1;
-                if(managelist[6] > highscore)
-                {
-                    highscore = managelist[6];
-                }
                 managelist[10] = 0;
                 drawNumber(7,managelist[6]);
                 ctx.beginPath();
@@ -999,10 +993,6 @@ $(function(){
             else if (managelist[6] == 0 && managelist[2] == managelist[10])
             {
                 managelist[2] += 1;
-                if(managelist[2] > highscore)
-                {
-                    highscore = managelist[2];
-                }
                 managelist[10] = 0;
                 drawNumber(3,managelist[2]);
                 ctx.beginPath();
@@ -1039,10 +1029,6 @@ $(function(){
             if (managelist[7] == managelist[11])
             {
                 managelist[7] += 1;
-                if(managelist[7] > highscore)
-                {
-                    highscore = managelist[7];
-                }
                 managelist[11] = 0;
                 drawNumber(8,managelist[7]);
                 ctx.beginPath();
@@ -1054,10 +1040,6 @@ $(function(){
             else if (managelist[7] == 0 && managelist[3] == managelist[11])
             {
                 managelist[3] += 1;
-                if(managelist[3] > highscore)
-                {
-                    highscore = managelist[3];
-                }
                 managelist[11] = 0;
                 drawNumber(4,managelist[3]);
                 ctx.beginPath();
@@ -1094,10 +1076,6 @@ $(function(){
             if (managelist[8] == managelist[12])
             {
                 managelist[8] += 1;
-                if(managelist[8] > highscore)
-                {
-                    highscore = managelist[8];
-                }
                 managelist[12] = 0;
                 drawNumber(9,managelist[8]);
                 ctx.beginPath();
@@ -1109,10 +1087,6 @@ $(function(){
             else if (managelist[8] == 0 && managelist[4] == managelist[12])
             {
                 managelist[4] += 1;
-                if(managelist[4] > highscore)
-                {
-                    highscore = managelist[4];
-                }
                 managelist[12] = 0;
                 drawNumber(5,managelist[4]);
                 ctx.beginPath();
@@ -1124,10 +1098,6 @@ $(function(){
             else if (managelist[8] == 0 && managelist[4] == 0 && managelist[0] == managelist[12])
             {
                 managelist[0] += 1;
-                if(managelist[0] > highscore)
-                {
-                    highscore = managelist[0];
-                }
                 managelist[12] = 0;
                 drawNumber(1,managelist[0]);
                 ctx.beginPath();
@@ -1175,10 +1145,6 @@ $(function(){
             if (managelist[9] == managelist[13])
             {
                 managelist[9] += 1;
-                if(managelist[9] > highscore)
-                {
-                    highscore = managelist[9];
-                }
                 managelist[13] = 0;
                 drawNumber(10,managelist[9]);
                 ctx.beginPath();
@@ -1190,10 +1156,6 @@ $(function(){
             else if (managelist[9] == 0 && managelist[5] == managelist[13])
             {
                 managelist[5] += 1;
-                if(managelist[5] > highscore)
-                {
-                    highscore = managelist[5];
-                }
                 managelist[13] = 0;
                 drawNumber(6,managelist[5]);
                 ctx.beginPath();
@@ -1205,10 +1167,6 @@ $(function(){
             else if (managelist[9] == 0 && managelist[5] == 0 && managelist[1] == managelist[13])
             {
                 managelist[1] += 1;
-                if(managelist[1] > highscore)
-                {
-                    highscore = managelist[1];
-                }
                 managelist[13] = 0;
                 drawNumber(2,managelist[1]);
                 ctx.beginPath();
@@ -1256,10 +1214,6 @@ $(function(){
             if (managelist[10] == managelist[14])
             {
                 managelist[10] += 1;
-                if(managelist[10] > highscore)
-                {
-                    highscore = managelist[10];
-                }
                 managelist[14] = 0;
                 drawNumber(11,managelist[10]);
                 ctx.beginPath();
@@ -1271,10 +1225,6 @@ $(function(){
             else if (managelist[10] == 0 && managelist[6] == managelist[14])
             {
                 managelist[6] += 1;
-                    if(managelist[6] > highscore)
-                    {
-                        highscore = managelist[6];
-                    }
                 managelist[14] = 0;
                 drawNumber(7,managelist[6]);
                 ctx.beginPath();
@@ -1286,10 +1236,6 @@ $(function(){
             else if (managelist[10] == 0 && managelist[6] == 0 && managelist[2] == managelist[14])
             {
                 managelist[2] += 1;
-                if(managelist[2] > highscore)
-                {
-                    highscore = managelist[2];
-                }
                 managelist[14] = 0;
                 drawNumber(3,managelist[2]);
                 ctx.beginPath();
@@ -1337,10 +1283,6 @@ $(function(){
             if (managelist[11] == managelist[15])
             {
                 managelist[11] += 1;
-                if(managelist[11] > highscore)
-                {
-                    highscore = managelist[11];
-                }
                 managelist[15] = 0;
                 drawNumber(12,managelist[11]);
                 ctx.beginPath();
@@ -1352,10 +1294,6 @@ $(function(){
             else if (managelist[11] == 0 && managelist[7] == managelist[15])
             {
                 managelist[7] += 1;
-                if(managelist[7] > highscore)
-                {
-                    highscore = managelist[7];
-                }
                 managelist[15] = 0;
                 drawNumber(8,managelist[7]);
                 ctx.beginPath();
@@ -1367,10 +1305,6 @@ $(function(){
             else if (managelist[11] == 0 && managelist[7] == 0 && managelist[3] == managelist[15])
             {
                 managelist[3] += 1;
-                if(managelist[3] > highscore)
-                {
-                    highscore = managelist[3];
-                }
                 managelist[15] = 0;
                 drawNumber(4,managelist[3]);
                 ctx.beginPath();
@@ -1413,6 +1347,7 @@ $(function(){
                 ctx.closePath();
             }
         }
+        
     }// ここに ArrowDown / ArrowRight / ArrowLeft を追加
     else if(event.key == "ArrowDown")
     {
@@ -1561,6 +1496,7 @@ $(function(){
             if(managelist[i] > highscore)
             {
                 highscore = managelist[i];
+                Achieved.play();
             }
         }
     }
