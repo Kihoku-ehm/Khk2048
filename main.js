@@ -257,7 +257,7 @@ $(function(){
             }
             else if (Producednumber == 30)
             {
-                ctx.fillStyle = "#000000ff";
+                ctx.fillStyle = "#520c0cff";
             }
 
             if (Producednumber < 10)
@@ -275,12 +275,17 @@ $(function(){
                 Displaynumber = Producednumber - 20;
                 Unit = "M";
             }
+            else if (Producednumber < 40)
+            {
+                Displaynumber = Producednumber - 30;
+                Unit = "B";
+            }
             ctx.fill();
             ctx.closePath();
-            ctx.font = "48px serif";
+            ctx.font = "36px serif";
             ctx.fillStyle = "white";
             ctx.textAlign = "center";
-            ctx.fillText(2**Displaynumber + Unit , 30 + Placenumber * 115 , 165);
+            ctx.fillText(2**Displaynumber + Unit , 32 + Placenumber * 115 , 163);
             managelist[Placenumber-1]=Producednumber;
             for(let i=0;i<16;i++)
             {
@@ -412,7 +417,7 @@ $(function(){
             }
             else if (Producednumber == 30)
             {
-                ctx.fillStyle = "#000000ff";
+                ctx.fillStyle = "#520c0cff";
             }
 
             if (Producednumber < 10)
@@ -430,12 +435,17 @@ $(function(){
                 Displaynumber = Producednumber - 20;
                 Unit = "M";
             }
+            else if (Producednumber < 40)
+            {
+                Displaynumber = Producednumber - 30;
+                Unit = "B";
+            }
             ctx.fill();
             ctx.closePath();
-            ctx.font = "48px serif";
+            ctx.font = "36px serif";
             ctx.fillStyle = "white";
             ctx.textAlign = "center";
-            ctx.fillText(2**Displaynumber + Unit , 30+(Placenumber-4)*115, 280);
+            ctx.fillText(2**Displaynumber + Unit , 32+(Placenumber-4)*115, 278);
             managelist[Placenumber-1]=Producednumber;
             for(let i=0;i<16;i++)
             {
@@ -567,7 +577,7 @@ $(function(){
             }
             else if (Producednumber == 30)
             {
-                ctx.fillStyle = "#000000ff";
+                ctx.fillStyle = "#520c0cff";
             }
 
             if (Producednumber < 10)
@@ -585,12 +595,17 @@ $(function(){
                 Displaynumber = Producednumber - 20;
                 Unit = "M";
             }
+            else if (Producednumber < 40)
+            {
+                Displaynumber = Producednumber - 30;
+                Unit = "B";
+            }
             ctx.fill();
             ctx.closePath();
-            ctx.font = "48px serif";
+            ctx.font = "36px serif";
             ctx.fillStyle = "white";
             ctx.textAlign = "center";
-            ctx.fillText(2**Displaynumber + Unit , 30 + (Placenumber - 8) * 115, 395);
+            ctx.fillText(2**Displaynumber + Unit , 32 + (Placenumber - 8) * 115, 393);
             managelist[Placenumber-1]=Producednumber;
             for(let i=0;i<16;i++)
             {
@@ -722,7 +737,7 @@ $(function(){
             }
             else if (Producednumber == 30)
             {
-                ctx.fillStyle = "#000000ff";
+                ctx.fillStyle = "#520c0cff";
             }
 
             if (Producednumber < 10)
@@ -740,12 +755,17 @@ $(function(){
                 Displaynumber = Producednumber - 20;
                 Unit = "M";
             }
+            else if (Producednumber < 40)
+            {
+                Displaynumber = Producednumber - 30;
+                Unit = "B";
+            }
             ctx.fill();
             ctx.closePath();
-            ctx.font = "48px serif";
+            ctx.font = "36px serif";
             ctx.fillStyle = "white";
             ctx.textAlign = "center";
-            ctx.fillText(2**Displaynumber + Unit , 30 + (Placenumber - 12) * 115, 510);
+            ctx.fillText(2**Displaynumber + Unit , 32 + (Placenumber - 12) * 115, 508);
             managelist[Placenumber-1]=Producednumber;
             for(let i=0;i<16;i++)
             {
