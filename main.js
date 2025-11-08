@@ -4,7 +4,7 @@ $(function(){
   Displaynumber = 0;
   Unit = "";
   highscore = 0;
-  const Merged = document.querySelector("#MS");
+  const mergeSound = document.querySelector("#MS");
   const Achieved = document.querySelector("#AS");
 
   const canvas = document.getElementById("myCanvas");
@@ -789,6 +789,7 @@ $(function(){
             {
                 managelist[0] += 1;
                 managelist[4] = 0;
+                mergeSound.play();
                 drawNumber(1,managelist[0]);
                 ctx.beginPath();
                 ctx.rect(100,215,95,95);
@@ -814,6 +815,7 @@ $(function(){
             {
                 managelist[1] += 1;
                 managelist[5] = 0;
+                mergeSound.play();
                 drawNumber(2,managelist[1]);
                 ctx.beginPath();
                 ctx.rect(215,215,95,95);
@@ -839,6 +841,7 @@ $(function(){
             {
                 managelist[2] += 1;
                 managelist[6] = 0;
+                mergeSound.play();
                 drawNumber(3,managelist[2]);
                 ctx.beginPath();
                 ctx.rect(330,215,95,95);
@@ -864,6 +867,7 @@ $(function(){
             {
                 managelist[3] += 1;
                 managelist[7] = 0;
+                mergeSound.play();
                 drawNumber(4,managelist[3]);
                 ctx.beginPath();
                 ctx.rect(445,215,95,95);
@@ -889,6 +893,7 @@ $(function(){
             {
                 managelist[4] += 1;
                 managelist[8] = 0;
+                mergeSound.play();
                 drawNumber(5,managelist[4]);
                 ctx.beginPath();
                 ctx.rect(100,330,95,95);
@@ -900,6 +905,7 @@ $(function(){
             {
                 managelist[0] += 1;
                 managelist[8] = 0;
+                mergeSound.play();
                 drawNumber(1,managelist[0]);
                 ctx.beginPath();
                 ctx.rect(100,330,95,95);
@@ -936,6 +942,7 @@ $(function(){
             {
                 managelist[5] += 1;
                 managelist[9] = 0;
+                mergeSound.play();
                 drawNumber(6,managelist[5]);
                 ctx.beginPath();
                 ctx.rect(215,330,95,95);
@@ -947,6 +954,7 @@ $(function(){
             {
                 managelist[1] += 1;
                 managelist[9] = 0;
+                mergeSound.play();
                 drawNumber(2,managelist[1]);
                 ctx.beginPath();
                 ctx.rect(215,330,95,95);
@@ -983,6 +991,7 @@ $(function(){
             {
                 managelist[6] += 1;
                 managelist[10] = 0;
+                mergeSound.play();
                 drawNumber(7,managelist[6]);
                 ctx.beginPath();
                 ctx.rect(330,330,95,95);
@@ -994,6 +1003,7 @@ $(function(){
             {
                 managelist[2] += 1;
                 managelist[10] = 0;
+                mergeSound.play();
                 drawNumber(3,managelist[2]);
                 ctx.beginPath();
                 ctx.rect(330,330,95,95);
@@ -1030,6 +1040,7 @@ $(function(){
             {
                 managelist[7] += 1;
                 managelist[11] = 0;
+                mergeSound.play();
                 drawNumber(8,managelist[7]);
                 ctx.beginPath();
                 ctx.rect(445,330,95,95);
@@ -1041,6 +1052,7 @@ $(function(){
             {
                 managelist[3] += 1;
                 managelist[11] = 0;
+                mergeSound.play();
                 drawNumber(4,managelist[3]);
                 ctx.beginPath();
                 ctx.rect(445,330,95,95);
@@ -1077,6 +1089,7 @@ $(function(){
             {
                 managelist[8] += 1;
                 managelist[12] = 0;
+                mergeSound.play();
                 drawNumber(9,managelist[8]);
                 ctx.beginPath();
                 ctx.rect(100,445,95,95);
@@ -1088,6 +1101,7 @@ $(function(){
             {
                 managelist[4] += 1;
                 managelist[12] = 0;
+                mergeSound.play();
                 drawNumber(5,managelist[4]);
                 ctx.beginPath();
                 ctx.rect(100,445,95,95);
@@ -1099,6 +1113,7 @@ $(function(){
             {
                 managelist[0] += 1;
                 managelist[12] = 0;
+                mergeSound.play();
                 drawNumber(1,managelist[0]);
                 ctx.beginPath();
                 ctx.rect(100,445,95,95);
@@ -1146,6 +1161,7 @@ $(function(){
             {
                 managelist[9] += 1;
                 managelist[13] = 0;
+                mergeSound.play();
                 drawNumber(10,managelist[9]);
                 ctx.beginPath();
                 ctx.rect(215,445,95,95);
@@ -1157,6 +1173,7 @@ $(function(){
             {
                 managelist[5] += 1;
                 managelist[13] = 0;
+                mergeSound.play();
                 drawNumber(6,managelist[5]);
                 ctx.beginPath();
                 ctx.rect(215,445,95,95);
@@ -1168,6 +1185,7 @@ $(function(){
             {
                 managelist[1] += 1;
                 managelist[13] = 0;
+                mergeSound.play();
                 drawNumber(2,managelist[1]);
                 ctx.beginPath();
                 ctx.rect(215,445,95,95);
@@ -1215,6 +1233,7 @@ $(function(){
             {
                 managelist[10] += 1;
                 managelist[14] = 0;
+                mergeSound.play();
                 drawNumber(11,managelist[10]);
                 ctx.beginPath();
                 ctx.rect(330,445,95,95);
@@ -1226,6 +1245,7 @@ $(function(){
             {
                 managelist[6] += 1;
                 managelist[14] = 0;
+                mergeSound.play();
                 drawNumber(7,managelist[6]);
                 ctx.beginPath();
                 ctx.rect(330,445,95,95);
@@ -1237,6 +1257,7 @@ $(function(){
             {
                 managelist[2] += 1;
                 managelist[14] = 0;
+                mergeSound.play();
                 drawNumber(3,managelist[2]);
                 ctx.beginPath();
                 ctx.rect(330,445,95,95);
@@ -1284,6 +1305,7 @@ $(function(){
             {
                 managelist[11] += 1;
                 managelist[15] = 0;
+                mergeSound.play();
                 drawNumber(12,managelist[11]);
                 ctx.beginPath();
                 ctx.rect(445,445,95,95);
@@ -1295,6 +1317,7 @@ $(function(){
             {
                 managelist[7] += 1;
                 managelist[15] = 0;
+                mergeSound.play();
                 drawNumber(8,managelist[7]);
                 ctx.beginPath();
                 ctx.rect(445,445,95,95);
@@ -1306,6 +1329,7 @@ $(function(){
             {
                 managelist[3] += 1;
                 managelist[15] = 0;
+                mergeSound.play();
                 drawNumber(4,managelist[3]);
                 ctx.beginPath();
                 ctx.rect(445,445,95,95);
@@ -1362,6 +1386,7 @@ $(function(){
                 {
                     res.unshift(tmp[i]+1);
                     i--; // skip merged
+                    mergeSound.play();
                 }
                 else
                 {
@@ -1412,6 +1437,7 @@ $(function(){
                 {
                     res.unshift(tmp[i]+1);
                     i--;
+                    mergeSound.play();
                 }
                 else
                 {
@@ -1460,6 +1486,7 @@ $(function(){
                 {
                     res.push(tmp[i]+1);
                     i++;
+                    mergeSound.play();
                 }
                 else
                 {
@@ -1496,7 +1523,6 @@ $(function(){
             if(managelist[i] > highscore)
             {
                 highscore = managelist[i];
-                Achieved.play();
             }
         }
     }
